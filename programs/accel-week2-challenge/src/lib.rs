@@ -193,7 +193,7 @@ pub struct Initialize<'info> {
     #[account(mut)]
     pub payer: Signer<'info>,
     #[account(
-        init,
+        init_if_needed,
         payer = payer,
         space = 8,
         seeds = [b"identity"],
@@ -201,7 +201,7 @@ pub struct Initialize<'info> {
     )]
     pub identity: Account<'info, Identity>,
     #[account(
-        init,
+        init_if_needed,
         payer = payer,
         space = 8 + 32,
         seeds = [b"counter"],
