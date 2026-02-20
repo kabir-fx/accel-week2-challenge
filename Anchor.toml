@@ -6,13 +6,13 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-accel_week2_challenge = "2qpnJXySMHRbeCKpVC6HGYcr6EGzkKa4hxZVJtbc4qGk"
+accel_week2_challenge = "FdE4kjyyhnFzRa4bLwauJDK7QPbvKKZXXUE4mXsD8tF5"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "localnet"
+cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
