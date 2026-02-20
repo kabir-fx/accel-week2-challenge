@@ -6,7 +6,10 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-accel_week2_challenge = "FdE4kjyyhnFzRa4bLwauJDK7QPbvKKZXXUE4mXsD8tF5"
+accel_week2_challenge = "6H4snerpahMBxnbTpth6P4vQPxhfFCchVp4rDVnZQSia"
+
+[programs.devnet]
+accel_week2_challenge = "6H4snerpahMBxnbTpth6P4vQPxhfFCchVp4rDVnZQSia"
 
 [registry]
 url = "https://api.apr.dev"
@@ -17,3 +20,4 @@ wallet = "~/.config/solana/id.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 \"tests/**/*.ts\""
+cron = "yarn run ts-node cron/cron.ts --cronName gpt-oracle-cron --queueName gpt-oracle --walletPath ~/.config/solana/id.json --rpcUrl https://api.devnet.solana.com --contextIndex 0"

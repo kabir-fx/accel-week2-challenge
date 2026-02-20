@@ -2,7 +2,7 @@ import * as anchor from "@coral-xyz/anchor";
 import { BN, Program, web3 } from "@coral-xyz/anchor";
 import { SolanaGptOracle } from "../target/types/solana_gpt_oracle";
 
-describe.only("solana-gpt-oracle", () => {
+describe("solana-gpt-oracle", () => {
   const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 

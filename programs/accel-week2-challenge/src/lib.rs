@@ -1,3 +1,6 @@
+pub mod schedule;
+pub use schedule::*;
+
 use anchor_lang::prelude::ProgramError;
 use anchor_lang::prelude::*;
 use anchor_lang::solana_program::instruction::Instruction;
@@ -5,7 +8,7 @@ use anchor_lang::solana_program::program::invoke_signed;
 use ephemeral_rollups_sdk::anchor::{delegate, ephemeral};
 use ephemeral_rollups_sdk::cpi::DelegateConfig;
 
-declare_id!("LLMrieZMpbJFwN52WgmBNMxYojrpRVYXdC1RCweEbab");
+declare_id!("6H4snerpahMBxnbTpth6P4vQPxhfFCchVp4rDVnZQSia");
 
 const ORACLE_IDENTITY: Pubkey = pubkey!("A1ooMmN1fz6LbEFrjh6GukFS2ZeRYFzdyFjeafyyS7Ca");
 
@@ -183,6 +186,11 @@ pub mod solana_gpt_oracle {
             DelegateConfig::default(),
         )?;
         Ok(())
+    }
+
+    pub fn schedule(ctx: Context<Schedule>, task_id: u16) -> Result<()> {
+        let bumps = ctx.bumps;
+        ctx.accounts.schedule(task_id, bumps)
     }
 }
 

@@ -6,12 +6,23 @@
   },
   "dependencies": {
     "@coral-xyz/anchor": "0.31.1",
-    "@helium/tuktuk-sdk": "^0.0.10"
+    "@helium/cron-sdk": "^0.0.10",
+    "@helium/spl-utils": "^0.0.10",
+    "@helium/tuktuk-sdk": "^0.0.10",
+    "@metaplex-foundation/mpl-token-metadata": "^3.4.0",
+    "@metaplex-foundation/umi": "^1.5.1",
+    "@metaplex-foundation/umi-bundle-defaults": "^1.5.1",
+    "@solana/spl-token": "^0.4.13",
+    "all": "^0.0.0",
+    "axios": "^1.13.5",
+    "ts-node": "^10.9.2",
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "@types/bn.js": "^5.1.0",
     "@types/chai": "^4.3.0",
     "@types/mocha": "^9.0.0",
+    "@types/yargs": "^17.0.32",
     "chai": "^4.3.4",
     "mocha": "^9.0.3",
     "prettier": "^2.6.2",
